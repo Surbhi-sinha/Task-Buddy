@@ -2,8 +2,10 @@
 
 ![alt text](Images/image.png)
 
+## Live Link - https://taskbuddy-psi.vercel.app/
 ## Table of Contents
 - [TaskBuddy - Your Personal Task Management Solution](#taskbuddy---your-personal-task-management-solution)
+  - [Live Link - https://taskbuddy-psi.vercel.app/](#live-link---httpstaskbuddy-psivercelapp)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Getting Started](#getting-started)
