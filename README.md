@@ -155,6 +155,7 @@ More similar projects by me - https://surbhi-portfolio-beige.vercel.app/
 
 Clone the repository here:
 ```
+>>> git clone https://github.com/Surbhi-sinha/Task-Buddy.git
 ```
 
 Install Npm dependencies
