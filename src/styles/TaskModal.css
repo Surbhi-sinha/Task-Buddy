@@ -1,0 +1,423 @@
+/* src/styles/TaskModal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.task-modal {
+  background-color: white;
+  border-radius: 8px;
+  max-width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* Default width for create mode */
+  width: 600px;
+}
+
+/* Additional class for edit mode */
+.task-modal-edit {
+  width: 950px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.task-title-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.task-title-input:focus {
+  border-color: #9c27b0;
+}
+
+.description-group {
+  position: relative;
+}
+
+.description-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.description-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.rich-text-toolbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.toolbar-btn {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  border-radius: 4px;
+}
+
+.toolbar-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.bold-btn {
+  font-weight: bold;
+}
+
+.italic-btn {
+  font-style: italic;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background-color: #ddd;
+  margin: 0 8px;
+}
+
+.task-description-input {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 14px;
+  outline: none;
+}
+
+.task-description-input:focus {
+  border-color: #9c27b0;
+}
+
+.character-count {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.category-group {
+  margin-bottom: 0;
+}
+
+.category-options {
+  display: flex;
+  gap: 10px;
+}
+
+.category-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.category-option.selected {
+  background-color: #9c27b0;
+  border-color: #ccc;
+  color: white;
+}
+
+.category-option input {
+  display: none;
+}
+
+.date-input-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.date-input-wrapper input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
+.status-select-wrapper {
+  position: relative;
+}
+
+.status-select-wrapper select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  appearance: none;
+  outline: none;
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+  font-size: 10px;
+}
+
+.attachment-area {
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-prompt {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+}
+
+.upload-link {
+  color: #5c6bc0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.attachments-list {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.attachment-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.attachment-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  font-size: 16px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid #eee;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #666;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.create-btn {
+  padding: 10px 20px;
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.task-form {
+  flex: 2;
+  padding: 20px;
+}
+
+.activity-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+}
+
+.activity-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.activity-log {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.task-title-input,
+.task-description-input,
+.date-input-wrapper input,
+.status-select-wrapper select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.attachment-area {
+  border: 1px dashed #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.upload-prompt {
+  font-size: 14px;
+}
+
+.attachments-list {
+  margin-top: 10px;
+}
+
+.attachment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.attachment-item span {
+  font-size: 14px;
+}
+
+.attachment-item button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.activity-message{
+  font-size: small;
+  color: #7e7878;
+}
+.activity-time{
+  font-size: small;
+  color: #7e7878;
+}
